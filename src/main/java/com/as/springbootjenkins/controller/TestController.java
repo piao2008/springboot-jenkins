@@ -18,7 +18,7 @@ public class TestController {
     public String index()
     {
 
-        return  "tests";
+        return  "test";
     }
     @ResponseBody
     @GetMapping("/demo")
