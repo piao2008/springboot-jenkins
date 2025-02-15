@@ -2,6 +2,7 @@ package com.as.springbootjenkins.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -26,12 +27,17 @@ public class TestController {
     {
         return  "demo..";
     }
-
-    //
     @ResponseBody
-    @GetMapping("/metrics")
-    public String metrics()
+    @GetMapping("/test/{value}")
+    public String demo(@PathVariable("value") Integer value)
     {
-        return  "demo..metrics";
+        int a=100/value;
+        return  "value:"+a;
     }
+//    @ResponseBody
+//    @GetMapping("/metrics")
+//    public String metrics()
+//    {
+//        return  "demo..metrics";
+//    }
 }
