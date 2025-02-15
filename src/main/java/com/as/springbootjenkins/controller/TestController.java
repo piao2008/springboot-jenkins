@@ -26,4 +26,12 @@ public class TestController {
     {
         return  "demo..";
     }
+
+    //
+    @ResponseBody
+    @GetMapping("/metrics")
+    public String metrics()
+    {
+        return  "demo..metrics";
+    }
 }
